@@ -8,7 +8,13 @@ version = "0.0.0"
 description = "MedianView will be a simple Python web app for deterministic 3x3 median image filtering."
 readme = "AGENTS.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "Flask>=3.1,<4",
+    "Pillow>=11,<13",
+]
+
+[project.scripts]
+medianview = "medianview.app:main"
 
 [project.optional-dependencies]
 dev = [
